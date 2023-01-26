@@ -69,12 +69,12 @@ class UserS {
     secretPhone.splice(4, 6, "*", "*", "*", "*", "*", "*");
     secretPhone = secretPhone.join("");
 
-    return isAdmin ? console.log(this.#phone) : console.log(secretPhone);
+    return isAdmin ? this.#phone : secretPhone;
   }
 }
 
 const user3 = new UserS("Alex", "099-999-99-99");
 const user4 = new UserS("Tom", "088-888-88-88");
 
-user3.getPhone(true);
-user4.getPhone(false);
+console.log(user3.getPhone(true));
+console.log(user4.getPhone(false));
